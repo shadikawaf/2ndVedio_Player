@@ -5,6 +5,7 @@ const progress = document.getElementById('progress');
 const timestamp = document.getElementById('timestamp');
 const mute = document.getElementById('mute');
 const unmute = document.getElementById('unmute');
+const volume = document.getElementById('volume');
 
 // Play & pause video
 const toggleVideoStatus = () => {
@@ -95,3 +96,9 @@ progress.addEventListener('change', setVideoProgress);
  // Mute/Unmute 
  unmute.addEventListener('click', unmuteVideo);
  mute.addEventListener('click', muteVideo);
+
+ //volume
+
+ volume.addEventListener('change', (e)=>{
+   video.volume = e.currentTarget.value / 100;
+ });
